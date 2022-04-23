@@ -6,6 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: our-source
-      - run: ls -al
-      - run: ls -al our-source
+          fetch-depth: 3
+      - run: git log --pretty=oneline
