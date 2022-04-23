@@ -1,10 +1,11 @@
-name: Our Workflow
+name: Our Checkout Workflow
 on: push
 jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -al
       - uses: actions/checkout@v3
+        with:
+          path: our-source
       - run: ls -al
-      - run: cat .github/workflows/checkout.yml
+      - run: ls -al our-source
